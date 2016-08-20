@@ -1,7 +1,7 @@
-<section class="quarterback-results"> 
+<section class="defense-results"> 
   <header>
-    <h1 class="h3">Quarterbacks</h1> 
-    <p>Subjective player rankings by SB Nation</p>
+    <h1 class="h3">Defense / Special Teams</h1> 
+    <p>Subjective team rankings by SB Nation</p>
   </header>
   <%= link_to root_path, class: "left-arrow" do %>
     <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
@@ -10,16 +10,14 @@
     <thead> 
       <tr>
         <th>Rank</th>
-        <th>Name</th>
-        <th>Email</th>
+        <th>Team</th>
       </tr>
     </thead>
     <tbody>
-      <% @quarterbacks.each do |q| %> 
+      <% @defenses.each do |d| %> 
         <tr>
-          <td><%= q.rank %></td>
-          <td><%= q.name %></td>
-          <td><%= q.team %></td>
+          <td><%= d.rank %></td>
+          <td><%= d.team %></td>
         </tr>
       <% end %> 
     </tbody>
@@ -28,3 +26,4 @@
     <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
   <% end %>
 </section>
+
