@@ -1,13 +1,31 @@
-<header>
-  <h1>
-    Welcome to Fantasy Football
-  </h1> 
-  <h2>
-    We're using Rails <%= Rails.version %> </h2>
+  <br />
+  <h4>
+    Search for a player or view by position
+    <br />
+    <br />
+    <ul>
+      <li><%= link_to 'Quaterback', quarterbacks_path %></li>
+      <li><%= link_to 'Running Back' %></li>
+      <li><%= link_to 'Wide Receiver' %></li>    
+      <li><%= link_to 'Flex' %></li>
+      <li><%= link_to 'Tight End' %></li>
+      <li><%= link_to 'Kicker' %></li>
+      <li><%= link_to 'D/ST' %></li>
+    </ul>
+  </h4>
 </header>
-
-<section>
-  <p>
-    Future home of Fantasy Football Dashboard
-  </p>
+<br />
+<section class="search-form">
+  <%= form_for :players, method: :get do |f| %>
+    <div class="input-group input-group-lg">
+      <%= label_tag :keywords, nil, class: "sr-only" %> 
+      <%= text_field_tag :keywords, nil,
+        placeholder: "Player name, position, team",
+        class: "form-control input-lg" %> 
+      <span class="input-group-btn">
+        <%= submit_tag "Find Players",
+          class: "btn btn-primary btn-lg" %>
+      </span>
+    </div>
+  <% end %>
 </section>

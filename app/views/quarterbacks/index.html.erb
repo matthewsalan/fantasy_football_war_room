@@ -1,0 +1,30 @@
+<section class="quarterback-results"> 
+  <header>
+    <h1 class="h3">Quarterbacks</h1> 
+    <p>Subjective player rankings by SB Nation</p>
+  </header>
+  <%= link_to root_path, class: "left-arrow" do %>
+    <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
+  <% end %>
+   <table class="table table-striped">
+    <thead> 
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @quarterbacks.each do |q| %> 
+        <tr>
+          <td><%= q.rank %></td>
+          <td><%= q.name %></td>
+          <td><%= q.team %></td>
+        </tr>
+      <% end %> 
+    </tbody>
+  </table>
+   <%= link_to root_path, class: "left-arrow" do %>
+    <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
+  <% end %>
+</section>

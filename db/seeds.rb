@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'D/ST.csv'))
+csv = CSV.parse(csv_text, headers: false)
+csv.each do |row|
+  Defense.create(rank: row[0], team: row[1])
+end
