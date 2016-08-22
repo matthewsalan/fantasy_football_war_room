@@ -8,8 +8,8 @@
 
 require 'csv'
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'runningback_std.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'kicker.csv'))
 csv = CSV.parse(csv_text, headers: false)
 csv.each do |row|
-  StdRunningBack.create(rank: row[0], name: row[1], team: row[2], points: row[3])
+  Kicker.create(rank: row[0], name: row[1], team: row[2], points: row[3])
 end

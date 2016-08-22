@@ -1,13 +1,13 @@
-<section class="quarterback-results"> 
+<section class="kickers-results"> 
   <header>
-    <h1 class="h3">Quarterbacks</h1> 
+    <h1 class="h3">Kickers</h1> 
     <div class="SB_ranks">
-      <p>Subjective player rankings by SB Nation</p>
+      <p>Rankings based on total points from 2015</p>
     </div>
     <br />
     <br />
     <div class="ESPN_points">
-      <p>Points based off ESPN Standard</p>
+      <p>Points based off fantasydata.com Standard scoring</p>
     </div>  
   </header>
   <%= link_to root_path, class: "left-arrow" do %>
@@ -23,12 +23,12 @@
       </tr>
     </thead>
     <tbody>
-      <% @quarterbacks.each do |q| %> 
+      <% @kickers.each do |k| %> 
         <tr>
-          <td><%= q.rank %></td>
-          <td><%= q.name %></td>
-          <td><%= q.points %></td>
-          <td><%= q.team %></td>
+          <td><%= k.rank %></td>
+          <td><%= k.name %></td>
+          <td><%= k.points %></td>
+          <td><%= k.team %></td>
         </tr>
       <% end %> 
     </tbody>
@@ -37,3 +37,5 @@
     <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
   <% end %>
 </section>
+
+
