@@ -1,13 +1,13 @@
-<section class="ppr_running_backs-results"> 
+<section class="std_running_backs-results"> 
   <header>
-    <h1 class="h3">PPR Running Backs</h1> 
+    <h1 class="h3">Standard Running Backs</h1> 
     <div class="SB_ranks">
       <p>Subjective player rankings by SB Nation</p>
     </div>
     <br />
     <br />
     <div class="ESPN_points">
-      <p>Points based off fantasydata.com PPR</p>
+      <p>Points based off ESPN Standard</p>
     </div>  
   </header>
   <%= link_to root_path, class: "left-arrow" do %>
@@ -23,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @ppr_running_backs.each do |r| %> 
+      <% @std_running_backs.each do |r| %> 
         <tr>
           <td><%= r.rank %></td>
           <td><%= r.name %></td>
@@ -37,4 +37,5 @@
     <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
   <% end %>
 </section>
+
 

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :defenses, only: [:index, :show]
   resources :tight_ends, only: [:index, :show]
   resources :ppr_running_backs, only: [:index, :show]
+  resources :std_running_backs, only: [:index, :show]
 end
