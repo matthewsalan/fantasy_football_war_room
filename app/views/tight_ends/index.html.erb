@@ -1,0 +1,31 @@
+<section class="tight_end-results"> 
+  <header>
+    <h1 class="h3">Tight Ends</h1> 
+    <p>Subjective player rankings by SB Nation</p>
+  </header>
+  <%= link_to root_path, class: "left-arrow" do %>
+    <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
+  <% end %>
+   <table class="table table-striped">
+    <thead> 
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tight_ends.each do |q| %> 
+        <tr>
+          <td><%= q.rank %></td>
+          <td><%= q.name %></td>
+          <td><%= q.team %></td>
+        </tr>
+      <% end %> 
+    </tbody>
+  </table>
+   <%= link_to root_path, class: "left-arrow" do %>
+    <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
+  <% end %>
+</section>
+
