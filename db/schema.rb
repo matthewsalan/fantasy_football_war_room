@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822001018) do
+ActiveRecord::Schema.define(version: 20160822034851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20160822001018) do
   create_table "defenses", force: :cascade do |t|
     t.integer  "rank"
     t.string   "team"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "points"
+  end
+
+  create_table "ppr_running_backs", force: :cascade do |t|
+    t.integer  "rank"
+    t.string   "name"
+    t.string   "team"
+    t.string   "points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160822001018) do
     t.string   "team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "points"
   end
 
   create_table "tight_ends", force: :cascade do |t|
@@ -37,6 +48,7 @@ ActiveRecord::Schema.define(version: 20160822001018) do
     t.string   "team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "points"
   end
 
 end

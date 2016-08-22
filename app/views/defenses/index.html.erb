@@ -1,7 +1,14 @@
 <section class="defense-results"> 
   <header>
     <h1 class="h3">Defense / Special Teams</h1> 
-    <p>Subjective team rankings by SB Nation</p>
+     <div class="SB_ranks">
+      <p>Subjective team rankings by SB Nation</p>
+    </div>
+    <br />
+    <br />
+    <div class="ESPN_points">
+      <p>Points based off ESPN Standard</p>
+    </div>  
   </header>
   <%= link_to root_path, class: "left-arrow" do %>
     <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
@@ -11,6 +18,7 @@
       <tr>
         <th>Rank</th>
         <th>Team</th>
+        <th>Points</th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +26,7 @@
         <tr>
           <td><%= d.rank %></td>
           <td><%= d.team %></td>
+          <td><%= d.points %></td>
         </tr>
       <% end %> 
     </tbody>

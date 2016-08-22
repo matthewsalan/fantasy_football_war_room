@@ -1,2 +1,2 @@
-class Defense < ActiveRecord::Base
+class Defense < ActiveRecord::Base  
 end

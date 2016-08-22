@@ -1,7 +1,14 @@
 <section class="quarterback-results"> 
   <header>
     <h1 class="h3">Quarterbacks</h1> 
-    <p>Subjective player rankings by SB Nation</p>
+    <div class="SB_ranks">
+      <p>Subjective team rankings by SB Nation</p>
+    </div>
+    <br />
+    <br />
+    <div class="ESPN_points">
+      <p>Points based off ESPN Standard</p>
+    </div>  
   </header>
   <%= link_to root_path, class: "left-arrow" do %>
     <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
@@ -11,6 +18,7 @@
       <tr>
         <th>Rank</th>
         <th>Name</th>
+        <th>Points</th>
         <th>Team</th>
       </tr>
     </thead>
@@ -19,6 +27,7 @@
         <tr>
           <td><%= q.rank %></td>
           <td><%= q.name %></td>
+          <td><%= q.points %></td>
           <td><%= q.team %></td>
         </tr>
       <% end %> 

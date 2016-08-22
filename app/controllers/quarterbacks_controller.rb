@@ -1,6 +1,6 @@
 class QuarterbacksController < ApplicationController
   def index
-    @quarterbacks = Quarterback.all
+    @quarterbacks = Quarterback.all.order("rank ASC")
   end
 
   def show

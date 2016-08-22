@@ -1,8 +1,8 @@
-<section class="tight_end-results"> 
+<section class="ppr_running_backs-results"> 
   <header>
-    <h1 class="h3">Tight Ends</h1> 
+    <h1 class="h3">PPR Running Backs</h1> 
     <div class="SB_ranks">
-      <p>Subjective team rankings by SB Nation</p>
+      <p>Subjective player rankings by SB Nation</p>
     </div>
     <br />
     <br />
@@ -23,12 +23,12 @@
       </tr>
     </thead>
     <tbody>
-      <% @tight_ends.each do |q| %> 
+      <% @ppr_running_backs.each do |r| %> 
         <tr>
-          <td><%= q.rank %></td>
-          <td><%= q.name %></td>
-          <td><%= q.points %></td>
-          <td><%= q.team %></td>
+          <td><%= r.rank %></td>
+          <td><%= r.name %></td>
+          <td><%= r.points %></td>
+          <td><%= r.team %></td>
         </tr>
       <% end %> 
     </tbody>

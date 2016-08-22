@@ -1,6 +1,6 @@
 class TightEndsController < ApplicationController
   def index
-    @tight_ends = TightEnd.all
+    @tight_ends = TightEnd.all.order("rank ASC")
   end
 
   def show
