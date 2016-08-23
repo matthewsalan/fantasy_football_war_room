@@ -8,8 +8,8 @@
 
 require 'csv'
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'wrr_std.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'wrr_ppr.csv'))
 csv = CSV.parse(csv_text, headers: false)
 csv.each do |row|
-  StdWideReceiver.create(rank: row[0], name: row[1], team: row[2], points: row[3])
+  PprWideReceiver.create(rank: row[0], name: row[1], team: row[2], points: row[3])
 end

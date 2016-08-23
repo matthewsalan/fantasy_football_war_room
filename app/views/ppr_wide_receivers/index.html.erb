@@ -1,0 +1,41 @@
+<section class="ppr_wide_receivers-results"> 
+  <header>
+    <h1 class="h3">Wide Receivers - PPR</h1> 
+    <div class="SB_ranks">
+      <p>* Ordered by projected player rankings from SB Nation for 2016 season</p>
+    </div>
+    <br />
+    <br />
+    <div class="ESPN_points">
+      <p>* Points based off fantasydata.com PPR scoring</p>
+    </div>  
+  </header>
+  <%= link_to root_path, class: "left-arrow" do %>
+    <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
+  <% end %>
+   <table class="table table-striped">
+    <thead> 
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Points</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @ppr_wide_receivers.each do |r| %> 
+        <tr>
+          <td><%= r.rank %></td>
+          <td><%= r.name %></td>
+          <td><%= r.points %></td>
+          <td><%= r.team %></td>
+        </tr>
+      <% end %> 
+    </tbody>
+  </table>
+   <%= link_to root_path, class: "left-arrow" do %>
+    <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
+  <% end %>
+</section>
+
+
