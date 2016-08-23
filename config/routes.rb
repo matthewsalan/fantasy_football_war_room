@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :ppr_running_backs, only: [:index, :show]
   resources :std_running_backs, only: [:index, :show]
   resources :kickers, only: [:index, :show]
+  resources :std_wide_receivers, only: [:index, :show]
 end

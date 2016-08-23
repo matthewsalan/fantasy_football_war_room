@@ -1,0 +1,2 @@
+module StdWideReceiversHelper
+end

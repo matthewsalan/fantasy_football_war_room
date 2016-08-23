@@ -1,13 +1,13 @@
-<section class="ppr_running_backs-results"> 
+<section class="std_wide_receivers-results"> 
   <header>
-    <h1 class="h3">Running Backs - PPR</h1> 
+    <h1 class="h3">Wide Receivers - Standard</h1> 
     <div class="SB_ranks">
       <p>* Ordered by projected player rankings from SB Nation for 2016 season</p>
     </div>
     <br />
     <br />
     <div class="ESPN_points">
-      <p>* Points based off fantasydata.com PPR scoring</p>
+      <p>* Points based off fantasydata.com Standard scoring</p>
     </div>  
   </header>
   <%= link_to root_path, class: "left-arrow" do %>
@@ -23,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @ppr_running_backs.each do |r| %> 
+      <% @std_wide_receivers.each do |r| %> 
         <tr>
           <td><%= r.rank %></td>
           <td><%= r.name %></td>
