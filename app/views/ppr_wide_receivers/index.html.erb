@@ -1,19 +1,33 @@
 <section class="ppr_wide_receivers-results"> 
-  <header>
-    <h1 class="h3">Wide Receivers - PPR</h1> 
-    <div class="SB_ranks">
-      <p>* Ordered by projected player rankings from SB Nation for 2016 season</p>
+  <ul class="breadcrumb">
+    <li>
+      <%= link_to "Home Page", root_path %>
+    </li>
+    <li class="active">Running Backs Standard</li>
+  </ul>
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Ranking</h3>
+        </div>
+        <div class="panel-body">
+          Ordered by projected player rankings from SB Nation for 2016 season
+        </div>
+      </div>
     </div>
-    <br />
-    <br />
-    <div class="ESPN_points">
-      <p>* Points based off fantasydata.com PPR scoring</p>
-    </div>  
-  </header>
-  <%= link_to root_path, class: "left-arrow" do %>
-    <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
-  <% end %>
-   <table class="table table-striped">
+
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Scoring</h3>
+        </div>
+        <div class="panel-body">
+          Points based off fantasydata.com PPR scoring from 2015 season
+        </div>
+      </div>
+    </div>
+
+     <table class="table table-striped">
     <thead> 
       <tr>
         <th>Rank</th>
@@ -32,10 +46,8 @@
         </tr>
       <% end %> 
     </tbody>
-  </table>
-   <%= link_to root_path, class: "left-arrow" do %>
+  </table><%= link_to root_path, class: "left-arrow" do %>
     <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
   <% end %>
 </section>
-
 
