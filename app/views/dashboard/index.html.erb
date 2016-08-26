@@ -1,15 +1,14 @@
- 
-  <div class="jumbotron">
-    <h1>Welcome To The War Room</h1>
-    <p class="lead">Everything you need is here.  All positions with projected player rankings by SB Nation.  Postions broken
-      down by Standard vs. PPR.  Points provided by ESPN and fantasydata.com
-    </p>
- </div>
-  <h4>
-    Search for a player
-  </h4>
-  <br />
-  <section class="search-form">
+<div class="jumbotron">
+  <h1>Welcome To The War Room</h1>
+  <p class="lead">Everything you need is here.  All positions with projected player rankings by SB Nation.  Postions broken
+    down by Standard vs. PPR.  Points provided by ESPN and fantasydata.com
+  </p>
+</div>
+
+<h4>Search for a player</h4>
+<br />
+
+<section class="search-form">
   <%= form_for :players, method: :get do |f| %>
     <div class="input-group input-group-lg">
       <%= label_tag :keywords, nil, class: "sr-only" %> 
@@ -22,30 +21,24 @@
       </span>
     </div>
   <% end %>
-  </section>
+</section>
 
-  <br />
+<br />
 
-  <h4>View by position</h4>
+<h4>View by position</h4>
 
-  <div class="row marketing">
-    <div class="col-md-4">
-      <h4><%= link_to 'Quarterback', quarterbacks_path %></h4>      
-      <h4><%= link_to 'Running Back PPR', ppr_running_backs_path %></h4>
-      <h4><%= link_to 'Running Back Standard', std_running_backs_path %></h4>      
-    </div>
-
-    <div class="col-md-4">
-      <h4><%= link_to 'Wide Receiver PPR', ppr_wide_receivers_path %></h4>
-      <h4><%= link_to 'Wide Receiver Standard', std_wide_receivers_path %></h4>
-       <h4><%= link_to 'Tight End', tight_ends_path %></li></h4>
-    </div>
-
-    <div class="col-md-4"> 
-      <h4><%= link_to 'Flex' %></li></h4> 
-      <h4><%= link_to 'Kicker', kickers_path %></li></h4>
-      <h4><%= link_to 'D/ST', defenses_path %></li></h4>
-    </div>
+<div class="row marketing">
+  <div class="col-md-4 col-md-offset-2">
+    <h4><%= link_to 'Quarterback', quarterbacks_path %></h4>      
+    <h4><%= link_to 'Running Back PPR', ppr_running_backs_path %></h4>
+    <h4><%= link_to 'Running Back Standard', std_running_backs_path %></h4>      
+    <h4><%= link_to 'Wide Receiver PPR', ppr_wide_receivers_path %></h4>
   </div>
 
-
+  <div class="col-md-4 col-md-offset-1"> 
+    <h4><%= link_to 'Wide Receiver Standard', std_wide_receivers_path %></h4>
+    <h4><%= link_to 'Tight End', tight_ends_path %></li></h4>
+    <h4><%= link_to 'Kicker', kickers_path %></li></h4>
+    <h4><%= link_to 'D/ST', defenses_path %></li></h4>
+  </div> 
+</div>

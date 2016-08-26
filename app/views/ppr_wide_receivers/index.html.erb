@@ -1,4 +1,7 @@
 <section class="ppr_wide_receivers-results"> 
+
+  <%= render "dashboard/tab" %>
+
   <ul class="breadcrumb">
     <li>
       <%= link_to "Home Page", root_path %>
@@ -46,8 +49,4 @@
         </tr>
       <% end %> 
     </tbody>
-  </table><%= link_to root_path, class: "left-arrow" do %>
-    <i class="glyphicon glyphicon-circle-arrow-left"> Back</i>
-  <% end %>
-</section>
-
+  </table>
