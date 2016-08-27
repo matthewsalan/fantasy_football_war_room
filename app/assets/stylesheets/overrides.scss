@@ -11,6 +11,32 @@ ul li {
   padding-top: 5px; 
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  min-width: 0px;  
+  background: #f2efe8;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background: transparent;
+}
+
+.dropdown-menu > li > a:hover {
+  background: transparent;
+}
+
+.nav-justified {
+
+  > li {
+    > a:hover {
+      background: transparent;
+    }
+  }
+}
+
 .btn-primary {
   background-color: #935347;
   border-color: #935347;

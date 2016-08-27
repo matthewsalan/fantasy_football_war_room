@@ -1,12 +1,33 @@
 <div class="masthead">
   <nav>
     <ul class="nav nav-justified">
-      <li><a href="#">Quarterbacks</a></li>
-      <li><a href="#">Running Backs</a></li>
-      <li><a href="#">Wide Receiver</a></li>
-      <li><a href="#">Tight End</a></li>
-      <li><a href="#">Kicker</a></li>
-      <li><a href="#">Defense</a></li>
+      <li><%= link_to 'Quarterback', quarterbacks_path %></li>
+      <li class="">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+          Running Backs
+        </a>
+        <ul class="dropdown-menu">
+          <li><%= link_to 'Running Back PPR', ppr_running_backs_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to 'Running Back Standard', std_running_backs_path %></li>
+        </ul>
+      </li> 
+      <li class="">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+          Wide Receivers
+        </a>
+        <ul class="dropdown-menu">
+          <li><%= link_to 'Wide Receiver PPR', ppr_wide_receivers_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to 'Wide Receiver Standard', std_wide_receivers_path %></li>
+        </ul>
+      </li>
+      <li><%= link_to 'Tight End', tight_ends_path %></li>
+      <li><%= link_to 'Kicker', kickers_path %></li>
+      <li><%= link_to 'D/ST', defenses_path %></li>
     </ul>
   </nav>
 </div>
+
+
+

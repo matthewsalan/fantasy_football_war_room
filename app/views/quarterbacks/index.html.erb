@@ -38,17 +38,17 @@
           <th>Name</th>
           <th>Points</th>
           <th>Team</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @quarterbacks.each do |q| %> 
-        <tr>
-          <td><%= q.rank %></td>
-          <td><%= q.name %></td>
-          <td><%= q.points %></td>
-          <td><%= q.team %></td>
         </tr>
-      <% end %> 
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @quarterbacks.each do |q| %> 
+          <tr>
+            <td><%= q.rank %></td>
+            <td><%= q.name %></td>
+            <td><%= q.points %></td>
+            <td><%= q.team %></td>
+          </tr>
+        <% end %> 
+      </tbody>
+     </table>
 </section>
