@@ -13,7 +13,7 @@
     <div class="input-group input-group-lg">
       <%= label_tag :keywords, nil, class: "sr-only" %> 
       <%= text_field_tag :keywords, nil,
-        placeholder: "Player name, position, team",
+        placeholder: "Player name, team",
         class: "form-control input-lg" %> 
       <span class="input-group-btn">
         <%= submit_tag "Find Players",
@@ -22,6 +22,16 @@
     </div>
   <% end %>
 </section>
+
+<table class="table table-striped">
+  <tbody>
+    <% @results.each do |r| %> 
+      <tr>
+        <td><%= r.content %></td>
+      </tr>
+    <% end %> 
+  </tbody>
+</table>
 
 <br />
 
